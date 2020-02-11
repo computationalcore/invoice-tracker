@@ -1,7 +1,16 @@
 # invoice-tracker
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+[![](https://travis-ci.org/computationalcore/invoice-tracker.svg?branch=master)](https://travis-ci.org/computationalcore/invoice-tracker.svg?branch=master)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/computationalcore/invoice-tracker.svg)](https://lgtm.com/projects/g/computationalcore/invoice-tracker/context:javascript)
+
+This is a simple invoice tracker built with Ember.js.
+
+Features
+
+- Create invoices with amount and date
+- Filter invoices by date
+- Edit invoices
+- Remove invoices
 
 ## Prerequisites
 
