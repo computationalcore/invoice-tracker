@@ -12,6 +12,10 @@ Features
 - Edit invoices
 - Remove invoices
 
+## Demo
+
+[Open App](https://computationalcore.github.io/invoice-tracker/)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
