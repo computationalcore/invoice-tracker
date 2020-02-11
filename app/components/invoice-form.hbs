@@ -1,0 +1,30 @@
+<PaperForm @onSubmit={{this.save}} as |form|>
+  <div class="layout-row">
+    <EmberFlatpickr
+      date={{this.date}}
+      enableTime={{false}}
+      @onChange={{this.changeDate}}
+      placeholder={{this.placeholderDate}}
+      @required={{true}}
+    />
+    <PaperInputMask
+      @mask="currency"
+      @label="Invoice Amount"
+      @value={{this.amount}}
+      @onChange={{this.changeAmount}}
+      @required={{true}}
+      @min={{0.01}}
+      @errorMessages={{hash
+        min="The amount need to be at least 0.01."
+      }}
+    />
+  </div>
+  <div class="layout-row button-container">
+    <PaperButton @raised={{true}} @accent={{true}} onClick={{@cancelAction}}>Cancel</PaperButton>
+
+    <form.submit-button
+      @raised={{true}}
+      @primary={{true}}
+    >Save</form.submit-button>
+  </div>
+</PaperForm>
