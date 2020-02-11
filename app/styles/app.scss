@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,700,700italic);
 @import 'ember-paper';
+@import 'paper-data-table';
 
 /*
 * Base Elements
@@ -17,3 +18,29 @@ body {
   text-align: center;
 }
 
+.table-cell, .invoice-table-container {
+  text-align: center !important;
+  padding: 0px !important;
+}
+
+.invoice-table-container {
+  margin-top: 20px;
+}
+
+.invoice-table-filter {
+  margin: 0 20px 0 20px;
+}
+
+.bold-text {
+  font-weight: center;
+}
+
+/* InvoiceForm */
+.button-container {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.invoice-total {
+  font-weight: bold;
+}

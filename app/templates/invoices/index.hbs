@@ -1,0 +1,16 @@
+<Header @text="Invoices" />
+<PaperButton
+  @raised={{true}}
+  @primary={{true}}
+  @href={{href-to "invoices.new"}}
+>{{paper-icon "note_add"}} Add Invoice
+</PaperButton>
+<div class="row">
+  <div class="col-xs-12">
+    <Invoice-table
+      @model={{this.model}}
+      @editAction={{this.edit}}
+      @deleteAction={{this.delete}}
+    />
+  </div>
+</div>

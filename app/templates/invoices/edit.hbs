@@ -1,0 +1,10 @@
+<Header @text="Edit Invoice {{@model.id}}" />
+<div class="row">
+  <InvoiceForm
+    @saveAction={{this.save}}
+    @cancelAction={{this.cancel}}
+    @id={{@model.id}}
+    @date={{@model.date}}
+    @amount={{@model.amount}}
+  />
+</div>
