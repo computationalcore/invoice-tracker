@@ -51,23 +51,4 @@ module('Acceptance | ember invoice tracker', function(hooks) {
     assert.equal(currentURL(), '/invoices');
   });
 
-  test('visiting /invoices/edit', async function(assert) {
-    await visit('/invoices/edit');
-
-    assert.equal(currentURL(), '/invoices/edit');
-
-    assert.dom('h1.invoice-header').hasText('Edit Invoice');
-
-    assert.dom('input.ember-flatpickr-input').exists();
-    assert.dom('.md-input').exists();
-
-    assert.dom('button.md-accent').exists();
-    assert.dom('button.md-primary').exists();
-
-    await click('button.md-accent');
-
-    assert.equal(currentURL(), '/invoices');
-  });
-
-
 });
