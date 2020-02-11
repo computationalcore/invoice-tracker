@@ -1,0 +1,65 @@
+<div class="invoice-table-container">
+{{#if (or this.invoices this.isFiltered) }}
+  <div class="invoice-table-filter">
+    <p>Filter Invoices by Date Interval</p>
+    <div class="layout-row button-container">
+      <p class="bold-text">From: </p>
+      <EmberFlatpickr
+        date={{this.startDate}}
+        enableTime={{false}}
+        @onChange={{this.changeStartDate}}
+        placeholder={{"Start Date"}}
+      />
+      <p class="bold-text"> To: </p>
+      <EmberFlatpickr
+        date={{this.endDate}}
+        enableTime={{false}}
+        @onChange={{this.changeEndDate}}
+        placeholder="End Date"
+      />
+    </div>
+
+    <div class="layout-row button-container">
+      {{#if this.isFiltered}}
+        <PaperButton @raised={{true}} @accent={{true}} onClick={{this.clearDateFilter}}>Clear Filter</PaperButton>
+      {{else}}
+        <PaperButton @raised={{true}} @primary={{true}} onClick={{this.filterByDate}}>Filter</PaperButton>
+      {{/if}}
+    </div>
+  </div>
+
+  <h2>Invoice List</h2>
+
+  <PaperDataTable
+    @sortProp="amount"
+    @sortDir="desc"
+    @selectable={{true}}
+    as |table|
+  >
+    <table.head as |head|>
+      <head.column class="table-cell" sortProp="date">Date</head.column>
+      <head.column class="table-cell" sortProp="amount">Amount</head.column>
+      <head.column class="table-cell">Edit</head.column>
+      <head.column class="table-cell">Date</head.column>
+    </table.head>
+    <table.body as |body|>
+      {{#each this.invoices as |invoice|}}
+        <body.row>
+          <td class="table-cell">{{moment-format invoice.date 'MM/DD/YYYY'}}</td>
+          <td class="table-cell">{{format-money (hash amount=invoice.amount currency='USD') }}</td>
+          <td class="table-cell"><PaperButton @raised={{true}} @primary={{true}} @onClick={{fn @editAction invoice.id}}>{{paper-icon "edit"}} Edit</PaperButton></td>
+          <td class="table-cell"><PaperButton @raised={{true}} @accent={{true}} @onClick={{fn @deleteAction invoice.id}}>{{paper-icon "delete"}} Delete</PaperButton></td>
+        </body.row>
+      {{/each}}
+      <body.row class="invoice-total">
+        <td class="table-cell">TOTAL</td>
+        <td class="table-cell">{{format-money (hash amount=this.total currency='USD')}}</td>
+        <td class="table-cell"></td>
+        <td class="table-cell"></td>
+      </<body.row>
+    </table.body>
+  </PaperDataTable>
+{{else}}
+  <div>No data</div>
+{{/if}}
+</div>
