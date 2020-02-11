@@ -1,1 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,700,700italic);
 @import 'ember-paper';
+
+/*
+* Base Elements
+*/
+body {
+ background: #fdfdfd;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ font-family: 'Roboto', Helvetica, Arial, sans-serif;
+ line-height: 1.5;
+}
+
+.open-button {
+  text-align: center;
+}
+

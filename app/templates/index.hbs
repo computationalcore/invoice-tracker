@@ -1,0 +1,25 @@
+<div class="intro">
+  <div class="right tomster"></div>
+  <Header @text="Welcome to Invoice Tracker!" />
+  <p>This is a simple invoice tracker built with Ember.js.</p>
+  <h3>Features</h3>
+  <PaperList>
+    <PaperItem>
+      {{paper-icon "note_add"}}
+      <p>Create invoices with amount and date</p>
+   </PaperItem>
+    <PaperItem>
+      {{paper-icon "calendar_today"}}
+      <p>Filter invoices by date</p>
+    </PaperItem>
+    <PaperItem>
+      {{paper-icon "edit"}}
+      <p>Edit invoices</p>
+    </PaperItem>
+    <PaperItem>
+      {{paper-icon "delete"}}
+      <p>Remove invoices</p>
+    </PaperItem>
+  </PaperList>
+  <PaperButton class="open-button" @raised={{true}} @primary={{true}}>Open App</PaperButton>
+</div>
