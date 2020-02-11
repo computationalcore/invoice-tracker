@@ -12,8 +12,7 @@ module('Integration | Component | header', function(hooks) {
 
     await render(hbs`<Header @text="Header Text Test" />`);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
-    assert.dom('.invoice-header').exists();
-    assert.dom('.invoice-header').hasText('Header Text Test');
+    assert.dom('h1.invoice-header').exists();
+    assert.dom('h1.invoice-header').hasText('Header Text Test');
   });
 });

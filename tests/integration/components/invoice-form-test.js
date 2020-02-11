@@ -14,7 +14,7 @@ module('Integration | Component | invoice-form', function(hooks) {
     assert.dom('input.ember-flatpickr-input').exists();
     assert.dom('.md-input').exists();
 
-    assert.dom('button.md-accent').hasText('Close');
-    assert.dom('button.md-primary').hasText('Save');
+    assert.dom('button.md-accent').exists();
+    assert.dom('button.md-primary').exists();
   });
 });
