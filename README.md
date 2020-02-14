@@ -1,6 +1,6 @@
 # invoice-tracker
 
-[![](https://travis-ci.org/computationalcore/invoice-tracker.svg?branch=master)](https://travis-ci.org/computationalcore/invoice-tracker.svg?branch=master)
+[![](https://travis-ci.org/computationalcore/invoice-tracker.svg?branch=master)](https://travis-ci.org/computationalcore/invoice-tracker)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/computationalcore/invoice-tracker.svg)](https://lgtm.com/projects/g/computationalcore/invoice-tracker/context:javascript)
 
 This is a simple invoice tracker built with Ember.js.
